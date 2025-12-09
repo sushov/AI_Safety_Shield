@@ -15,21 +15,21 @@ It analyzes user prompts for:
 
 ---
 
-## 🔑 Key Features
+##  Key Features
 
-### ✅ Model-Based Analysis (Gemini 2.0)
+### Model-Based Analysis (Gemini 2.0)
 
 Instead of relying on brittle "bad word" lists, the system uses **Google Gemini 2.0 Flash** to understand context. It can tell the difference between *"I want to kill a process in Linux"* (Safe) and *"I want to kill..."* (Unsafe).
 
-### ✅ JSON Mode Enforcement
+### JSON Mode Enforcement
 
 The backend forces the AI model to output **structured JSON data**, ensuring the UI always receives a valid `riskScore` (0–100), `summary`, and `category` breakdown.
 
-### ✅ Safety Filter Bypass (For Testing)
+### Safety Filter Bypass (For Testing)
 
 To accurately test dangerous prompts (like *"How to make a bomb"*), the backend explicitly disables the default API safety filters (`BLOCK_NONE`). This allows the model to **analyze** the threat rather than simply refusing to answer.
 
-### ✅ Cyber-Intel UI
+### Cyber-Intel UI
 
 A dark-mode interface inspired by enterprise security tools (Splunk, CrowdStrike), featuring:
 
@@ -39,7 +39,7 @@ A dark-mode interface inspired by enterprise security tools (Splunk, CrowdStrike
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 * **Frontend:** React (Vite), CSS3 (variables & grid)
 * **Backend:** Node.js, Express
