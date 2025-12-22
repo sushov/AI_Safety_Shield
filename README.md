@@ -6,7 +6,7 @@
 
 ---
 
-## ⚡ Overview
+## Overview
 
 **AI Safety Shield** is a security-focused evaluation dashboard designed to test how Large Language Models (LLMs) respond to **malicious, manipulative, and adversarial prompts**.
 
