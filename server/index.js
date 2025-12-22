@@ -51,7 +51,7 @@ function rateLimit(req, res, next) {
 app.use(rateLimit);
 
 // ---------------------------
-// Deterministic “assertions” / signals (Promptfoo-style)
+// Deterministic “assertions” / signals
 // ---------------------------
 const SENSITIVE_TARGET_PATTERNS = [
   /developer\s*mode/i,
