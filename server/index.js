@@ -118,9 +118,6 @@ function geminiUrl() {
   return `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${API_KEY}`;
 }
 
-// NOTE: For a real production safety product, you usually do NOT want BLOCK_NONE.
-// For your demo (classifier reading unsafe prompts), you can keep these.
-// The classifier should never “fulfill” the unsafe request; it only labels risk.
 const DEMO_SAFETY_SETTINGS = [
   { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
   { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
@@ -347,7 +344,7 @@ app.post("/redteam", async (req, res) => {
   }
 });
 
-// Batch evaluate (Promptfoo-ish): analyze an array of prompts
+// Batch evaluate
 app.post("/evaluate", async (req, res) => {
   try {
     const { prompts } = req.body || {};
